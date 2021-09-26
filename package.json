@@ -1,0 +1,31 @@
+{
+  "name": "self",
+  "version": "1.0.0",
+  "description": "Self network for node-react",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "self": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Andriy",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mdbreact": "^5.1.0",
+    "mongoose": "^5.13.3",
+    "nodemon": "^2.0.12",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "validator": "^13.6.0"
+  }
+}
